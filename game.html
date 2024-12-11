@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKIBIDI OHIO RIZZ BATTLE ROYALE CHALLENGE (COPS CALLED) 😱🚨💯 (GONE WRONG) (3 AM)</title>
+    <style>
+        :root {
+            --ohio-pink: #ff00ff;
+            --skibidi-green: #00ff66;
+            --toilet-purple: #4a0066;
+            --camera-white: #ffffff;
+            --ohio-blue: #00ffff;
+            --ohio-orange: #ff4400;
+            --rizz-silver: #c0c0c0;
+            --toilet-pink: #ff00aa;
+            --ohio-yellow: #ffff00;
+            --goofy-rainbow: linear-gradient(45deg, #ff0000, #ff7700, #ffff00, #00ff00, #0000ff, #ff00ff);
+            --neon-glow: 0 0 30px var(--ohio-pink), 0 0 60px var(--ohio-blue), 0 0 90px var(--ohio-yellow);
+            --ultra-chaos: conic-gradient(from 0deg, #ff0000, #00ff00, #0000ff, #ff00ff, #ff0000);
+        }
+
+        * {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="25" font-size="25">💀</text></svg>'), auto;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
+            background: radial-gradient(circle, var(--toilet-purple), var(--ohio-blue), var(--ohio-orange));
+            color: var(--camera-white);
+            line-height: 1.6;
+            animation: skibidi-vibes 8s infinite;
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-size: 400% 400%;
+            animation: skibidi-vibes 4s infinite;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes skibidi-vibes {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            backdrop-filter: blur(8px);
+            flex: 1 0 auto;
+        }
+
+        .stats-panel {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--neon-glow);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--ohio-pink);
+        }
+
+        .currency {
+            font-size: 2.5rem;
+            color: var(--ohio-yellow);
+            text-shadow: 0 0 15px var(--ohio-yellow);
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .level-display {
+            font-size: 2.5rem;
+            color: var(--skibidi-green);
+            text-shadow: 0 0 15px var(--skibidi-green);
+            font-weight: bold;
+        }
+
+        .shop-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .shop-item {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--neon-glow);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--ohio-blue);
+        }
+
+        .shop-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px var(--ohio-pink);
+            border-color: var(--ohio-pink);
+        }
+
+        .battle-arena {
+            width: 100%;
+            height: 600px;
+            background: rgba(0, 0, 0, 0.7);
+            position: relative;
+            border-radius: 30px;
+            margin-top: 2rem;
+            overflow: hidden;
+            display: none;
+            box-shadow: var(--neon-glow);
+            backdrop-filter: blur(15px);
+            border: 3px solid var(--ohio-pink);
+        }
+
+        .health-bar,
+        .player-health-bar {
+            width: 80%;
+            height: 30px;
+            background: rgba(255, 0, 0, 0.3);
+            position: absolute;
+            top: 20px;
+            left: 10%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            overflow: hidden;
+            border: 2px solid var(--ohio-pink);
+        }
+
+        .health-bar-fill,
+        .player-health-fill {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #ff0000, #ff4444);
+            border-radius: 15px;
+            transition: width 0.3s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .health-bar-fill::after,
+        .player-health-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: healthShine 2s infinite;
+        }
+
+        @keyframes healthShine {
+            to {
+                left: 100%;
+            }
+        }
+
+        .player-health-bar {
+            bottom: 20px;
+            top: auto;
+        }
+
+        .flying-toilet {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            transition: all 0.2s ease-out;
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.7));
+            animation: toiletFloat 2s infinite alternate;
+        }
+
+        @keyframes toiletFloat {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .player {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            font-size: 3rem;
+            transition: transform 0.1s ease-out;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+            will-change: transform;
+            animation: playerHover 0.6s infinite alternate ease-in-out;
+        }
+
+        @keyframes playerHover {
+            from {
+                transform: translateX(-50%) translateY(0) scale(1);
+            }
+
+            to {
+                transform: translateX(-50%) translateY(-15px) scale(1.1);
+            }
+        }
+
+        .boss-name {
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            text-align: center;
+            font-size: 2.5rem;
+            text-shadow: 0 0 20px var(--ohio-pink);
+            font-weight: bold;
+            letter-spacing: 2px;
+            animation: textGlow 2s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 20px var(--ohio-pink);
+            }
+
+            to {
+                text-shadow: 0 0 40px var(--ohio-blue);
+            }
+        }
+
+        .rizz-button {
+            background: linear-gradient(45deg, var(--ohio-pink), var(--ohio-blue));
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1.4rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rizz-button:hover {
+            transform: scale(1.1) rotate(-2deg);
+            box-shadow: 0 0 40px var(--ohio-pink);
+        }
+
+        .rizz-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            animation: buttonShine 3s infinite;
+        }
+
+        @keyframes buttonShine {
+            from {
+                transform: translateX(-100%) rotate(45deg);
+            }
+
+            to {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+
+        .bullet {
+            position: absolute;
+            transition: all 0.1s linear;
+            z-index: 100;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+            animation: bulletRotate 0.5s infinite linear;
+        }
+
+        @keyframes bulletRotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin-and-scale {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.5);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+
+        .shop-item:hover {
+            transform: scale(1.2) rotate(5deg);
+            animation: spin-and-scale 1s infinite;
+        }
+
+        .rizz-button {
+            background: var(--goofy-rainbow);
+            font-size: 1.8rem;
+            text-shadow: 0 0 10px #fff;
+            animation: buttonPulse 0.5s infinite;
+        }
+
+        @keyframes buttonPulse {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            50% {
+                transform: scale(1.1) rotate(5deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+        }
+
+        .flying-toilet {
+            font-size: 6rem;
+            filter: drop-shadow(0 0 30px rgba(255, 0, 255, 0.8));
+            animation: toiletChaos 1s infinite;
+        }
+
+        @keyframes toiletChaos {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) scale(1);
+            }
+
+            25% {
+                transform: translate(-50%, -50%) rotate(90deg) scale(1.2);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) rotate(180deg) scale(0.8);
+            }
+
+            75% {
+                transform: translate(-50%, -50%) rotate(270deg) scale(1.4);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) scale(1);
+            }
+        }
+
+        .brainrot-tips {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--ohio-yellow);
+            text-shadow: 0 0 10px var(--ohio-pink);
+            animation: tipPulse 2s infinite;
+            border: 2px solid var(--ohio-pink);
+            box-shadow: var(--neon-glow);
+        }
+
+        .brainrot-tip {
+            margin: 1rem 0;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s;
+            display: none;
+        }
+
+        .brainrot-tip.active {
+            display: block;
+            animation: tipAppear 0.5s ease-in-out;
+        }
+
+        @keyframes tipAppear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .brainrot-tip:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+
+        :root {
+            --ohio-pink: #ff00ff;
+            --skibidi-green: #00ff66;
+            --toilet-purple: #4a0066;
+            --camera-white: #ffffff;
+            --ohio-blue: #00ffff;
+            --ohio-orange: #ff4400;
+            --rizz-silver: #c0c0c0;
+            --toilet-pink: #ff00aa;
+            --ohio-yellow: #ffff00;
+            --goofy-rainbow: linear-gradient(45deg, #ff0000, #ff7700, #ffff00, #00ff00, #0000ff, #ff00ff);
+            --neon-glow: 0 0 30px var(--ohio-pink), 0 0 60px var(--ohio-blue), 0 0 90px var(--ohio-yellow);
+            --ultra-chaos: conic-gradient(from 0deg, #ff0000, #00ff00, #0000ff, #ff00ff, #ff0000);
+        }
+
+        @keyframes chaosRotate {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.2);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        @keyframes rizzPulse {
+            0% {
+                filter: hue-rotate(0deg) brightness(1);
+            }
+
+            50% {
+                filter: hue-rotate(180deg) brightness(1.5);
+            }
+
+            100% {
+                filter: hue-rotate(360deg) brightness(1);
+            }
+        }
+
+        @keyframes skibidiShake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px) rotate(-5deg);
+            }
+
+            75% {
+                transform: translateX(5px) rotate(5deg);
+            }
+        }
+
+        .footer {
+            padding: 2rem;
+            text-align: center;
+            width: 100%;
+            z-index: 1000;
+            border-top: 10px solid var(--ultra-chaos);
+            animation: rizzPulse 3s infinite;
+            flex-shrink: 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            transform-style: preserve-3d;
+        }
+
+        .footer-link {
+            color: var(--camera-white);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            text-shadow: 0 0 10px var(--ohio-blue), 0 0 20px var(--ohio-pink);
+            font-family: "Comic Sans MS", cursive;
+            letter-spacing: 3px;
+            animation: skibidiShake 2s infinite;
+        }
+
+        .footer-link:hover {
+            color: var(--ohio-pink);
+            transform: scale(1.3) rotate(10deg);
+            text-shadow: 0 0 20px var(--ohio-pink), 0 0 40px var(--skibidi-green);
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            margin: 0;
+            color: var(--camera-white);
+            text-shadow: 0 0 20px var(--ohio-pink), 0 0 40px var(--ohio-blue);
+            font-family: "Comic Sans MS", cursive;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            font-size: 1.5rem;
+            color: var(--camera-white);
+            text-decoration: none;
+            transition: transform 0.3s;
+            animation: rizzPulse 2s infinite;
+        }
+
+        .footer-social a:hover {
+            transform: scale(1.5) rotate(360deg);
+        }
+
+        .footer-copyright {
+            font-size: 1rem;
+            color: var(--rizz-silver);
+            margin-top: 1rem;
+            text-shadow: 0 0 10px var(--ohio-yellow);
+            animation: skibidiShake 3s infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="brainrot-tips">
+        <div class="brainrot-tip">SKIBIDI TOILET CAMERA MAN JUST WENT ULTRA INSTINCT MODE FR FR 😱</div>
+        <div class="brainrot-tip">NO WAY BRO THE OHIO RIZZ MASTER JUST DROPPED THE LEGENDARY TOILET SWORD 🗡️</div>
+        <div class="brainrot-tip">GYATT TOILET BOSS JUST HIT THE GRIDDY ON THE HATERS NO CAP 🕺</div>
+        <div class="brainrot-tip">BRUH THE SKIBIDI TOILET ARMY JUST PULLED UP WITH THE RIZZ CANNON 💀</div>
+        <div class="brainrot-tip">YO THE OHIO WARRIOR JUST WENT SUPER SAIYAN TOILET MODE 🔥</div>
+        <div class="brainrot-tip">CAMERA MAN JUST DROPPED THE MOST FIRE TOILET BEAT OF 2024 🎵</div>
+        <div class="brainrot-tip">SKIBIDI TOILET BOSS SAID "IT'S TOILETING TIME" AND TOILETED EVERYWHERE 🚽</div>
+        <div class="brainrot-tip">BRO THE RIZZ LEVEL JUST WENT OVER 9000 NO SHOT 📈</div>
+        <div class="brainrot-tip">OHIO WARRIOR JUST UNLOCKED THE LEGENDARY TOILET BACKROOMS FR FR 🚪</div>
+        <div class="brainrot-tip">CAMERA HEAD JUST DID A 360 NO SCOPE TOILET FLIP SHEEEESH 🎯</div>
+        <div class="brainrot-tip">NAH THE SKIBIDI TOILET JUST CRANKED 90s IN OHIO STATE 🏗️</div>
+        <div class="brainrot-tip">RIZZ MASTER JUST DROPPED THE ULTRA RARE TOILET SKIN (0.0001% DROP RATE) 💯</div>
+        <div class="brainrot-tip">OHIO TOILET BOSS JUST ACTIVATED MAXIMUM OVERDRIVE MODE 🔋</div>
+        <div class="brainrot-tip">CAMERA HEAD ARMY JUST DEPLOYED THE SECRET TOILET TECHNIQUE 🤫</div>
+        <div class="brainrot-tip">BRO THE SKIBIDI DIMENSION JUST OPENED A PORTAL IN OHIO 🌀</div>
+        <div class="brainrot-tip">TOILET BOSS JUST DROPPED THE RAREST RIZZ EMOTE IN THE GAME 🕴️</div>
+        <div class="brainrot-tip">NO WAY THE OHIO WARRIOR JUST DISCOVERED THE LEGENDARY TOILET COMBO 🔄</div>
+        <div class="brainrot-tip">SKIBIDI CAMERA HEAD JUST UNLOCKED THE GOLDEN TOILET SKIN REAL!!! ✨</div>
+        <div class="brainrot-tip">RIZZ LEVEL MAXIMUM ACHIEVED: OHIO MODE ACTIVATED 🌟</div>
+        <div class="brainrot-tip">TOILET BOSS FINAL FORM JUST DROPPED AND IT'S BUSSIN FR FR 🔥</div>
+    </div>
+
+    <script>
+        function showRandomTip() {
+            const tips = document.querySelectorAll('.brainrot-tip');
+            tips.forEach(tip => tip.classList.remove('active'));
+            const randomTip = tips[Math.floor(Math.random() * tips.length)];
+            randomTip.classList.add('active');
+        }
+
+        setInterval(showRandomTip, 5000);
+        showRandomTip();
+    </script>
+
+    <div class="container">
+        <div class="stats-panel">
+            <div class="currency">RIZZ TOKENS: <span id="coins">0</span> 🪙</div>
+            <div class="level-display">LEVEL: <span id="level">1</span> 🏆</div>
+        </div>
+
+        <div class="shop-container">
+            <div class="shop-item">
+                <h3>WEAPON POWER 💪</h3>
+                <p>Current: <span id="weapon-level">1</span></p>
+                <p>Cost: <span id="weapon-cost">100</span> 🪙</p>
+                <button class="rizz-button" onclick="upgradeWeapon()">UPGRADE</button>
+            </div>
+            <div class="shop-item">
+                <h3>HEALTH BOOST ❤️</h3>
+                <p>Current: <span id="health-level">1</span></p>
+                <p>Cost: <span id="health-cost">150</span> 🪙</p>
+                <button class="rizz-button" onclick="upgradeHealth()">UPGRADE</button>
+            </div>
+            <div class="shop-item">
+                <h3>SPEED BOOST ⚡</h3>
+                <p>Current: <span id="speed-level">1</span></p>
+                <p>Cost: <span id="speed-cost">200</span> 🪙</p>
+                <button class="rizz-button" onclick="upgradeSpeed()">UPGRADE</button>
+            </div>
+        </div>
+
+        <h1>MEGA SKIBIDI TOILET BOSS BATTLE 🎯🚽 (ULTRA HARD) (IMPOSSIBLE)</h1>
+        <button class="rizz-button" onclick="startLevel()">START LEVEL</button>
+
+        <div class="battle-arena">
+            <div class="health-bar">
+                <div class="health-bar-fill"></div>
+            </div>
+            <div class="boss-name">MEGA SKIBIDI TOILET BOSS</div>
+            <div class="flying-toilet">🚽</div>
+            <div class="player" id="player">🤓</div>
+            <div class="player-health-bar">
+                <div class="player-health-fill"></div>
+            </div>
+            <h3>PRESS Z TO SHOOT! ARROW KEYS TO MOVE! (REAL GAMING)</h3>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3 class="footer-logo">🚽 ULTRA MEGA SKIBIDI OHIO CHALLENGE (GONE WRONG) 💀</h3>
+            <nav class="footer-nav">
+                <a href="index.html" class="footer-link">🏠 OHIO CRIB (3AM)</a>
+                <a href="game.html" class="footer-link">🎮 MEGA RIZZ BATTLE (REAL)</a>
+            </nav>
+            <div class="footer-copyright">
+                © 2024 SKIBIDI OHIO PRODUCTIONS (REAL) (NOT CLICKBAIT) (GONE WRONG) (POLICE CALLED) ⚡️💯🔥
+            </div>
+        </div>
+    </footer>
+
+    <audio id="bgMusic" loop autoplay>
+        <source src="videoplayback.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+<script>
+    window.onload = function () {
+        document.getElementById('bgMusic').play();
+    }
+
+    let coins = 0;
+    let currentLevel = 1;
+    let weaponLevel = 1;
+    let healthLevel = 1;
+    let speedLevel = 1;
+    let baseHealth = 150;
+    let baseSpeed = 6;
+    let baseDamage = 8;
+    let isLevelTransitioning = false;
+
+    const player = document.getElementById('player');
+    const healthBar = document.querySelector('.health-bar-fill');
+    const playerHealthBar = document.querySelector('.player-health-fill');
+    const bossName = document.querySelector('.boss-name');
+    const toilet = document.querySelector('.flying-toilet');
+    const battleArena = document.querySelector('.battle-arena');
+    let playerX = 50;
+    let playerVelocity = 0;
+    const friction = 0.85;
+    const acceleration = 0.6;
+    let bossHealth = 100;
+    let playerHealth = baseHealth;
+    let gameOver = false;
+    let rageMode = false;
+    let attackPatterns = ['spiral', 'figure8', 'random', 'bounce', 'chase', 'teleport'];
+    let currentPattern = 'spiral';
+    let bossInterval;
+    let lastShootTime = 0;
+    const SHOOT_COOLDOWN = 300;
+
+    let keys = {
+        ArrowLeft: false,
+        ArrowRight: false,
+        z: false
+    };
+
+    function updateStats() {
+        coins = Math.floor(coins);
+        document.getElementById('coins').textContent = coins;
+        document.getElementById('level').textContent = currentLevel;
+        document.getElementById('weapon-level').textContent = weaponLevel;
+        document.getElementById('health-level').textContent = healthLevel;
+        document.getElementById('speed-level').textContent = speedLevel;
+        document.getElementById('weapon-cost').textContent = Math.floor(weaponLevel * 100);
+        document.getElementById('health-cost').textContent = Math.floor(healthLevel * 150);
+        document.getElementById('speed-cost').textContent = Math.floor(speedLevel * 200);
+    }
+
+    function upgradeWeapon() {
+        const cost = Math.floor(weaponLevel * 100);
+        if (coins >= cost) {
+            coins -= cost;
+            weaponLevel++;
+            bossHealth = 100 * weaponLevel;
+            updateStats();
+        }
+    }
+
+    function upgradeHealth() {
+        const cost = Math.floor(healthLevel * 150);
+        if (coins >= cost) {
+            coins -= cost;
+            healthLevel++;
+            baseHealth = 150 * healthLevel;
+            updateStats();
+        }
+    }
+
+    function upgradeSpeed() {
+        const cost = Math.floor(speedLevel * 200);
+        if (coins >= cost) {
+            coins -= cost;
+            speedLevel++;
+            baseSpeed = 6 * speedLevel;
+            updateStats();
+        }
+    }
+
+    function shoot() {
+        if (gameOver || isLevelTransitioning) return;
+
+        const now = Date.now();
+        if (now - lastShootTime < SHOOT_COOLDOWN) return;
+        lastShootTime = now;
+
+        const bullet = document.createElement('div');
+        bullet.innerHTML = ['💨', '🔥', '⚡', '💯', '😤'][Math.floor(Math.random() * 5)];
+        bullet.style.position = 'absolute';
+        bullet.style.left = playerX + '%';
+        bullet.style.bottom = '100px';
+        bullet.style.fontSize = '2rem';
+        bullet.classList.add('bullet');
+        battleArena.appendChild(bullet);
+
+        const bulletInterval = setInterval(() => {
+            const bulletRect = bullet.getBoundingClientRect();
+            const toiletRect = toilet.getBoundingClientRect();
+
+            if (bulletRect.top <= toiletRect.bottom &&
+                bulletRect.right >= toiletRect.left &&
+                bulletRect.left <= toiletRect.right) {
+                if (!isLevelTransitioning) {
+                    damageToilet();
+                }
+                clearInterval(bulletInterval);
+                bullet.remove();
+            }
+
+            bullet.style.bottom = (parseInt(bullet.style.bottom) + 12) + 'px';
+
+            if (parseInt(bullet.style.bottom) > battleArena.offsetHeight) {
+                clearInterval(bulletInterval);
+                bullet.remove();
+            }
+        }, 16);
+    }
+
+    function moveBoss() {
+        if (gameOver) return;
+
+        let toiletX = 50;
+        let toiletY = 50;
+        let angle = 0;
+        let radius = 30;
+        let direction = 1;
+        let bounceY = 1;
+        let spiralGrowth = 0.1;
+
+        clearInterval(bossInterval);
+        bossInterval = setInterval(() => {
+            if (gameOver) return;
+
+            if (Math.random() < 0.02) {
+                currentPattern = attackPatterns[Math.floor(Math.random() * attackPatterns.length)];
+            }
+
+            if (rageMode) {
+                toilet.innerHTML = ['🚽', '😈', '👹', '💀', '🤬'][Math.floor(Math.random() * 5)];
+            }
+
+            const speedMultiplier = (1 + (currentLevel * 0.05)) * (rageMode ? 20 : 1);
+
+            switch (currentPattern) {
+                case 'spiral':
+                    angle += 0.03 * speedMultiplier;
+                    radius += spiralGrowth;
+                    if (radius > 40 || radius < 10) spiralGrowth *= -1;
+                    toiletX = 50 + Math.cos(angle) * radius;
+                    toiletY = 50 + Math.sin(angle) * radius;
+                    break;
+                case 'figure8':
+                    angle += 0.02 * speedMultiplier;
+                    toiletX = 50 + Math.sin(angle * 2) * 30;
+                    toiletY = 50 + Math.sin(angle) * 20;
+                    break;
+                case 'random':
+                    if (Math.random() < 0.05) {
+                        toiletX += (Math.random() - 0.5) * 8 * speedMultiplier;
+                        toiletY += (Math.random() - 0.5) * 8 * speedMultiplier;
+                    }
+                    break;
+                case 'bounce':
+                    toiletX += direction * 1.5 * speedMultiplier;
+                    toiletY += bounceY * 1.5 * speedMultiplier;
+                    if (toiletX >= 80 || toiletX <= 20) direction *= -1;
+                    if (toiletY >= 70 || toiletY <= 30) bounceY *= -1;
+                    break;
+                case 'chase':
+                    toiletX += (playerX - toiletX) * 0.03 * speedMultiplier;
+                    toiletY = 50 + Math.sin(angle) * 15;
+                    angle += 0.1;
+                    break;
+                case 'teleport':
+                    if (Math.random() < 0.02) {
+                        toiletX = 20 + Math.random() * 60;
+                        toiletY = 30 + Math.random() * 40;
+                    }
+                    break;
+            }
+
+            toiletX = Math.max(10, Math.min(90, toiletX));
+            toiletY = Math.max(20, Math.min(80, toiletY));
+
+            toilet.style.left = toiletX + '%';
+            toilet.style.top = toiletY + '%';
+
+            if (Math.random() < (0.04 + (currentLevel * 0.002)) * (rageMode ? 20 : 1)) {
+                const bullet = document.createElement('div');
+                bullet.innerHTML = '💧';
+                bullet.style.position = 'absolute';
+                bullet.style.left = toiletX + '%';
+                bullet.style.top = toiletY + '%';
+                bullet.style.fontSize = '2rem';
+                bullet.classList.add('bullet');
+                battleArena.appendChild(bullet);
+
+                const bulletSpeed = (1.5 + (currentLevel * 0.05)) * (rageMode ? 20 : 1);
+                const angleToPlayer = Math.atan2(100 - toiletY, playerX - toiletX);
+                const bulletVelX = Math.cos(angleToPlayer) * bulletSpeed;
+                const bulletVelY = Math.sin(angleToPlayer) * bulletSpeed;
+
+                const bulletInterval = setInterval(() => {
+                    const bulletRect = bullet.getBoundingClientRect();
+                    const playerRect = player.getBoundingClientRect();
+
+                    if (bulletRect.bottom >= playerRect.top &&
+                        bulletRect.right >= playerRect.left &&
+                        bulletRect.left <= playerRect.right) {
+                        playerHealth -= (5 + (currentLevel * 0.5)) * (rageMode ? 20 : 1);
+                        playerHealthBar.style.width = (playerHealth / baseHealth) * 100 + '%';
+                        clearInterval(bulletInterval);
+                        bullet.remove();
+
+                        if (playerHealth <= 0) {
+                            gameOver = true;
+                            const consolationCoins = Math.floor(currentLevel * 40);
+                            coins += consolationCoins;
+                            bossName.textContent = `GAME OVER! +${consolationCoins} CONSOLATION RIZZ TOKENS!`;
+                            clearInterval(bossInterval);
+                            updateStats();
+                        }
+                    }
+
+                    const currentLeft = parseFloat(bullet.style.left);
+                    const currentTop = parseFloat(bullet.style.top);
+                    bullet.style.left = (currentLeft + bulletVelX) + '%';
+                    bullet.style.top = (currentTop + bulletVelY) + '%';
+
+                    if (currentTop > 100 || currentTop < 0 || currentLeft > 100 || currentLeft < 0) {
+                        clearInterval(bulletInterval);
+                        bullet.remove();
+                    }
+                }, 16);
+            }
+        }, 16);
+    }
+
+    const victoryMessages = [
+        "ABSOLUTELY DEMOLISHED THE SKIBIDI TOILET FR FR NO CAP 💯",
+        "OHIO RIZZ TOO STRONG!!! 😤😤😤",
+        "SKIBIDI TOILET GOT RATIOED + L + NO RIZZ 🔥",
+        "MEGA W GAMING MOMENT (REAL) 🎮",
+        "SHEEEEEESH! TOILET STATUS: DESTROYED 🚽💥"
+    ];
+
+    function startLevel() {
+        battleArena.style.display = 'block';
+        bossHealth = 100 + (currentLevel * 20);
+        playerHealth = baseHealth;
+        healthBar.style.width = '100%';
+        playerHealthBar.style.width = '100%';
+        gameOver = false;
+        rageMode = Math.random() < 0.1;
+        isLevelTransitioning = false;
+        playerX = 50;
+        playerVelocity = 0;
+        player.style.transform = `translateX(-50%)`;
+
+        const bossTitle = `LEVEL ${currentLevel} MEGA TOILET${rageMode ? ' (RAGE MODE 🔥)' : ''}`;
+        const bossEmoji = currentLevel % 5 === 0 ? '🚽👑' : (rageMode ? '😈' : '🚽');
+        bossName.textContent = bossTitle;
+        toilet.textContent = bossEmoji;
+
+        if (currentLevel % 10 === 0) {
+            toilet.style.filter = `hue-rotate(${currentLevel * 36}deg) brightness(2)`;
+            toilet.style.fontSize = '6rem';
+        } else {
+            toilet.style.filter = 'none';
+            toilet.style.fontSize = '4rem';
+        }
+
+        moveBoss();
+    }
+
+    function damageToilet() {
+        if (isLevelTransitioning) return;
+
+        const damage = baseDamage;
+        bossHealth -= damage;
+        healthBar.style.width = (bossHealth / (100 + (currentLevel * 20))) * 100 + '%';
+
+        if (bossHealth <= 0 && !isLevelTransitioning) {
+            isLevelTransitioning = true;
+            gameOver = true;
+            const levelReward = Math.floor(currentLevel * 120);
+            coins = Math.floor(coins + levelReward);
+            currentLevel++;
+            updateStats();
+            bossName.textContent = `LEVEL ${currentLevel - 1} COMPLETE! +${levelReward} RIZZ TOKENS`;
+            clearInterval(bossInterval);
+
+            const bullets = document.querySelectorAll('.bullet');
+            bullets.forEach(bullet => bullet.remove());
+
+            const randomMessage = victoryMessages[Math.floor(Math.random() * victoryMessages.length)];
+            bossName.textContent = randomMessage;
+        }
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (gameOver) return;
+        keys[e.key] = true;
+    });
+
+    document.addEventListener('keyup', (e) => {
+        keys[e.key] = false;
+    });
+
+    function gameLoop() {
+        if (!gameOver) {
+            if (keys.ArrowLeft) {
+                playerVelocity -= baseSpeed * acceleration;
+            }
+            if (keys.ArrowRight) {
+                playerVelocity += baseSpeed * acceleration;
+            }
+
+            playerVelocity *= friction;
+            playerX += playerVelocity * 0.05;
+            playerX = Math.max(10, Math.min(90, playerX));
+            player.style.left = `${playerX}%`;
+
+            if (keys.z) {
+                shoot();
+            }
+        }
+        requestAnimationFrame(gameLoop);
+    }
+
+    gameLoop();
+    updateStats();
+</script>
+</body>
+
+</html>
